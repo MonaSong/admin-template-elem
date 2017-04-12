@@ -2,7 +2,7 @@
 /**
  * 测试接口
  *
- * @url /test-demo
+ * @url /users
  *
  * 详细的说明
  * uid: userID
@@ -12,7 +12,7 @@
 
 {
   "code": 0,
-  "result|5": [
+  "result|100": [
     {
       "uid|+1": 1,
       "name": "@name",
