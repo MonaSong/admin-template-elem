@@ -1,10 +1,10 @@
 <template>
   <div class="header">
     <el-row :span="24">
-      <el-col :span="5" :offset="3" justify="left">
+      <el-col :span="5" :offset="3" justify="start">
         <span>logo</span>
       </el-col>
-      <el-col :span="3" :offset="12">
+      <el-col :span="3" :offset="12" justify="end">
         <span @click="loginOut()">退出</span>
       </el-col>
     </el-row>

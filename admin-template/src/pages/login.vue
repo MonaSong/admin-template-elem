@@ -4,7 +4,7 @@
       {{login}}
     </div>
     <div class="login-info">
-      <el-form ref="login_form" :model="form" label-width="60px">
+      <el-form ref="login_form"  label-width="60px">
         <el-form-item label="用户名">
           <el-input type="text" placeholder="请输入用户名" v-model="user_name"></el-input>
         </el-form-item>
