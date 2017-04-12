@@ -5,6 +5,7 @@
   "author": "宋青青 <1161500093@qq.com>",
   "private": true,
   "scripts": {
+    "api": "nodemon -e js,json -w api-interface api-interface/app.js",
     "dev": "node build/dev-server.js",
     "start": "node build/dev-server.js",
     "build": "node build/build.js",

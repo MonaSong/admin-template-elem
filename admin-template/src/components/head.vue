@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <el-row :span="24">
+    <el-row :span="24" type="flex">
       <el-col :span="5" :offset="3" justify="start">
         <span>logo</span>
       </el-col>
