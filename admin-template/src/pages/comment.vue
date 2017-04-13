@@ -6,7 +6,9 @@
           <el-option
             v-for="item in options"
             :label="item.name"
-            :value="item.value"> {{item.name}}
+            :value="item.value"
+            :key = "$index" > {{item.name}}
+            
           </el-option>
         </el-select>
       </el-form-item>

@@ -1,8 +1,12 @@
 <template>
   <div class="component">
     <h3>{{cs}}</h3>
-    <v-comment :options="options" v-on:submitData="theOne"></v-comment>
-    <v-comment :options="options2" v-on:submitData="theTwo"></v-comment>
+    <el-row :span="24">
+      <el-col :span="12">
+        <v-comment :options="options" v-on:submitData="theOne"></v-comment>
+        <v-comment :options="options2" v-on:submitData="theTwo"></v-comment>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
