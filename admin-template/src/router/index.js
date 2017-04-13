@@ -17,8 +17,12 @@ export default new Router({
           component: resolve => require(['@/pages/grid.vue'], resolve)
         },
         {
-          path: 'grid',
+          path: '/grid',
           component: resolve => require(['@/pages/grid.vue'], resolve)
+        },
+        {
+          path: '/components',
+          component: resolve => require(['@/pages/cs.vue'], resolve)
         }
       ]
     }

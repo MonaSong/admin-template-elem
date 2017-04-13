@@ -25,7 +25,6 @@
 
 <style lang="less" scoped>
   .container{
-    padding-top: 15px;
-    padding-left: 235px;
+    padding: 30px 30px 30px 250px;
   }
 </style>
