@@ -22,7 +22,7 @@ export default new Router({
         },
         {
           path: '/components',
-          component: resolve => require(['@/pages/cs.vue'], resolve)
+          component: resolve => require(['@/pages/mycomponents.vue'], resolve)
         }
       ]
     }

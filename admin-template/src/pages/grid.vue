@@ -50,7 +50,7 @@
       :current-page="currentPage1"
       :page-size="pageSize"
       layout="total, prev, pager, next"
-      :total="100">
+      :total="totalCount">
     </el-pagination>
   </div>
 </template>
@@ -62,16 +62,19 @@
         dataList: null,
         curData: null,
         currentPage1: 1,
-        pageSize: 10
+        pageSize: 10,
+        totalCount: null
       }
     },
     methods: {
       getList (callback) {
+        let self = this
         let userList = null
         this.$http.get('/api/users').then(res => {
           if (typeof callback === 'function') {
             userList = res.data.result
             callback(userList)
+            self.totalCount = userList.length
           }
         }).catch(err => {
           console.log(err)
