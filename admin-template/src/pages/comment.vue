@@ -8,7 +8,6 @@
             :label="item.name"
             :value="item.value"
             :key = "index" > {{item.name}}
-            
           </el-option>
         </el-select>
       </el-form-item>
@@ -28,25 +27,11 @@
   export default {
     data () {
       return {
-        form: {
-          name: '',
-          region: '',
-          date1: '',
-          date2: '',
-          delivery: false,
-          type: [],
-          resource: '',
-          desc: ''
-        },
         textValue: '',
         selectValue: '',
         dis: true
       }
     },
-    // props: [
-    //   'messages',
-    //   'options'
-    // ],
     props: {
       messages: String,
       options: {
@@ -62,30 +47,26 @@
     },
     methods: {
       submitData () {
-        let self = this
         let args = {}
-        args['textValue'] = self.textValue
-        args['selectValue'] = self.selectValue
+        args['textValue'] = this.textValue
+        args['selectValue'] = this.selectValue
         this.$emit('submitData', args)
       },
       changeSelect () {
-        let self = this
-        self.setStatus()
+        this.setStatus()
       },
       changeText () {
-        let self = this
-        self.setStatus()
+        this.setStatus()
       },
       setStatus () {
-        let self = this
-        if (self.selectValue !== '') {
-          if (self.textValue !== '' || self.selectValue === '1') {
-            self.dis = false
+        if (this.selectValue !== '') {
+          if (this.textValue !== '' || this.selectValue === '1') {
+            this.dis = false
           } else {
-            self.dis = true
+            this.dis = true
           }
         } else {
-          self.dis = true
+          this.dis = true
         }
       }
     }
