@@ -3,7 +3,9 @@
     <v-head></v-head>
     <v-sidebar></v-sidebar>
     <div class="container">
-      <router-view></router-view>
+      <div class="container-box">
+        <router-view></router-view>
+      </div>
     </div>
   </div>
 </template>
@@ -24,7 +26,13 @@
 </script>
 
 <style lang="less" scoped>
+  @import '../assets/base.less';
   .container{
     padding: 30px 30px 30px 250px;
+    .container-box{
+      padding: 15px;
+      background-color: @white;
+      border-bottom: 1px solid @light-dark;
+    }
   }
 </style>

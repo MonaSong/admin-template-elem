@@ -20,6 +20,7 @@
 </template>
 
 <script>
+  import {mapMutations} from 'vuex'
   export default {
     data () {
       return {
@@ -29,11 +30,13 @@
       }
     },
     methods: {
+      ...mapMutations(['submit']), // 映射this.submit 为 this.$store.commit('submit')
       loginIn () {
         let self = this
         if (self.user_name === '' || self.password === '') {
           return ''
         }
+        this.submit(this.user_name)
         this.$router.push('/index')
       }
     }

@@ -23,6 +23,14 @@ export default new Router({
         {
           path: '/components',
           component: resolve => require(['@/pages/mycomponents.vue'], resolve)
+        },
+        {
+          path: '/vuexTest1',
+          component: resolve => require(['@/pages/vuexTest1.vue'], resolve)
+        },
+        {
+          path: '/vuexTest2',
+          component: resolve => require(['@/pages/vuexTest2.vue'], resolve)
         }
       ]
     }

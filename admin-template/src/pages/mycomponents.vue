@@ -3,8 +3,11 @@
     <h3>{{cs}}</h3>
     <el-row :span="24">
       <el-col :span="12">
-        <v-comment :options="options" v-on:submitData="theOne"></v-comment>
+        <v-comment :options="options" v-on:submitData="theOne">
+          <p slot="messages">你好！这是父组件的插入的内容</p>
+        </v-comment>
         <v-comment :options="options2" v-on:submitData="theTwo"></v-comment>
+        <v-comment  v-on:submitData="theThree"></v-comment>
       </el-col>
     </el-row>
   </div>
@@ -38,6 +41,10 @@
       },
       theTwo (args) {
         console.log('thetwo')
+        console.log(args)
+      },
+      theThree (args) {
+        console.log('theThree')
         console.log(args)
       }
     }

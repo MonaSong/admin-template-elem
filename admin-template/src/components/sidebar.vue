@@ -3,15 +3,16 @@
     <el-row :span="24">
       <el-col :span="24">
         <el-menu :default-active="onRoutes" class="el-menu-vertical-demo"  theme="dark" unique-opened router>
-          <el-menu-item index="1">
-            <i class="el-icon-settings">首页</i>
-          </el-menu-item>
+          <el-menu-item index="index">首页</el-menu-item>
           <el-submenu index="2">
-            <template slot="title"><i class="el-icon-message"></i>导航一</template>
-            <el-menu-item index="index">首页</el-menu-item>
+            <template slot="title"><i class="el-icon-message"></i>常用组件</template>
             <el-menu-item index="components">组件页</el-menu-item>
           </el-submenu>
-          <el-menu-item index="3"><i class="el-icon-menu"></i>导航二</el-menu-item>
+          <el-submenu index="3">
+            <template slot="title"><i class="el-icon-message"></i>vuex测试</template>
+            <el-menu-item index="vuexTest1">vuex测试页面1</el-menu-item>
+            <el-menu-item index="vuexTest2">vuex测试页面2</el-menu-item>
+          </el-submenu>
           <el-menu-item index="4"><i class="el-icon-setting"></i>导航三</el-menu-item>
         </el-menu>
       </el-col>

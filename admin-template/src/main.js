@@ -7,6 +7,7 @@ import elementUi from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
 import './assets/layout.less'
 import axios from 'axios'
+import store from './store/'
 Vue.prototype.$http = axios
 Vue.use(elementUi)
 Vue.config.productionTip = false
@@ -15,6 +16,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   template: '<App/>',
   components: { App }
 })
