@@ -1,5 +1,5 @@
 <template>
-  <div class="grid">
+  <div class="grid" v-loading="loading">
     <!--表格-->
     <el-table
       :data="curData"
@@ -63,7 +63,8 @@
         curData: null,
         currentPage1: 1,
         pageSize: 10,
-        totalCount: null
+        totalCount: null,
+        loading: true
       }
     },
     methods: {
@@ -141,6 +142,9 @@
       self.$nextTick(() => {
         console.log(self.dataList)
       })
+      setTimeout(() => {
+        self.loading = false
+      }, 1000)
     }
   }
 </script>
